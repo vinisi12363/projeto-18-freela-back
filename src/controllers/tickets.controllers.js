@@ -1,14 +1,16 @@
-import airlaneService from '../services/airline.service.js'
+import ticketsService from '../services/tickets.service.js'
 
 
-export const getAirlines=async (req, res)=>{
+
+
+export const getAllFlights = async(req, res)=>{
     try{
-        const result = await  airlaneService.getAllAirlines();
+        const result = await ticketsService.getAllFlights()
         console.table(result.rows)
         if (result){
             res.status(200).send(result.rows)
         }else {
-            res.status(404).send("a error ocurred in getAirlanes")
+            res.status(404).send("a error ocurred in getTickets")
         }
 
 
@@ -16,7 +18,6 @@ export const getAirlines=async (req, res)=>{
         res.status(500).send (err.message)
     }
 
-
 }
 
-export default getAirlines
+export default {getAirlines, getAllFlights}

@@ -1,4 +1,4 @@
-import getAirlines from '../controllers/tickets.controllers.js'
+import {getAirlines} from '../controllers/airlines.controllers.js'
 import express from 'express'
 
 const router = express.Router();
