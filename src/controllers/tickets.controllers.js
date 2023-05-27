@@ -1,8 +1,6 @@
 import ticketsService from '../services/tickets.service.js'
 
 
-
-
 export const getAllFlights = async(req, res)=>{
     try{
         const result = await ticketsService.getAllFlights()
@@ -20,4 +18,4 @@ export const getAllFlights = async(req, res)=>{
 
 }
 
-export default {getAirlines, getAllFlights}
+export default {getAllFlights}
