@@ -5,5 +5,4 @@ const router = express.Router();
 
 router.get("/airlines", getAirlines)
 
-
 export default router
