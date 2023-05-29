@@ -19,7 +19,8 @@ export const getAllFlights = async() => {
                 AND f.price >= $3 AND f.price <= $4
             ORDER BY f.departure_time
             LIMIT $5;
-      `,[1, 3, 1000, 1500, 30]
+      `,
+      [1, 3, 1000, 1500, 30]
     );
     return result;
   } catch (err) {
