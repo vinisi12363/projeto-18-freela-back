@@ -2,13 +2,6 @@ CREATE USER "amazingtripsdbuser" WITH PASSWORD 'senha_super_secreta_do_dbuser';
 GRANT ALL PRIVILEGES ON TABLE cities, airlines, flights, hotels, photos TO "amazingtripsdbuser";
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO "amazingtripsdbuser";
 
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR NOT NULL,
-  email VARCHAR UNIQUE NOT NULL,
-  password VARCHAR NOT NULL,
-);
-GRANT ALL PRIVILEGES ON TABLE users TO "amazingtripsdbuser";
 
 -- Tabela "Cities"
 CREATE TABLE cities (
