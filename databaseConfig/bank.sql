@@ -13,6 +13,7 @@ GRANT ALL PRIVILEGES ON TABLE users TO "amazingtripsdbuser";
 -- Tabela "Cities"
 CREATE TABLE cities (
   city_id SERIAL PRIMARY KEY,
+  city_uf VARCHAR(255) NOT NULL, 
   city_name VARCHAR(255) NOT NULL
 );
 
